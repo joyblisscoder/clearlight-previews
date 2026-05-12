@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Evandr · Video Sparks for Katy's Trip</title>
+<meta name="description" content="Five sparks to riff on for short videos. One hero spark for the homepage. From Cody.">
+<meta name="theme-color" content="#3d2e2a">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --warm-white: #f8f6f3;
+    --paper: #fdfbf7;
+    --dark-brown: #3d2e2a;
+    --ink-deep: #2a1f1c;
+    --muted-brown: #7a6b64;
+    --soft-taupe: #b8ada6;
+    --light-sand: #ece8e3;
+    --rule: rgba(122,107,100,0.18);
+  }
+
+  html, body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--warm-white);
+    color: var(--dark-brown);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background:
+      radial-gradient(ellipse at 18% 25%, rgba(122,107,100,0.07) 0%, transparent 50%),
+      radial-gradient(ellipse at 82% 75%, rgba(184,173,166,0.06) 0%, transparent 45%);
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .wrap { position: relative; z-index: 1; max-width: 780px; margin: 0 auto; padding: 0 5vw; }
+
+  .banner {
+    background: var(--ink-deep);
+    color: var(--warm-white);
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+  }
+
+  /* HEADER */
+  header {
+    padding: 8vh 0 1rem;
+    text-align: left;
+  }
+  .mark {
+    font-family: 'Crimson Text', serif;
+    font-style: italic;
+    font-size: 0.85rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--soft-taupe);
+    margin-bottom: 1.5rem;
+  }
+  h1 {
+    font-family: 'Crimson Text', serif;
+    font-weight: 400;
+    font-size: clamp(2.1rem, 4.5vw, 3rem);
+    color: var(--ink-deep);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin-bottom: 1.3rem;
+    max-width: 18ch;
+  }
+  .deck {
+    font-family: 'Crimson Text', serif;
+    font-style: italic;
+    font-size: clamp(1.1rem, 1.5vw, 1.3rem);
+    color: var(--muted-brown);
+    max-width: 52ch;
+    line-height: 1.5;
+  }
+
+  /* VIBE BLOCK */
+  .vibe {
+    margin: 5vh 0 4vh;
+    padding: 2rem 2rem;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+  }
+  .vibe-eyebrow {
+    font-family: 'Crimson Text', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--soft-taupe);
+    margin-bottom: 0.8rem;
+  }
+  .vibe p {
+    font-family: 'Crimson Text', serif;
+    font-size: 1.1rem;
+    line-height: 1.65;
+    color: var(--dark-brown);
+    margin-bottom: 0.9rem;
+  }
+  .vibe p:last-child { margin-bottom: 0; }
+
+  /* FORMAT BASICS */
+  .basics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 0.6rem;
+    margin: 4vh 0 5vh;
+  }
+  .basic {
+    padding: 1.1rem 1.2rem;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+  }
+  .basic .lbl {
+    font-size: 0.62rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--soft-taupe);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  .basic .val {
+    font-family: 'Crimson Text', serif;
+    font-size: 1.05rem;
+    color: var(--dark-brown);
+    line-height: 1.4;
+  }
+
+  /* SECTION HEADER */
+  .section-eyebrow {
+    font-family: 'Crimson Text', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--soft-taupe);
+    margin-bottom: 0.5rem;
+  }
+  h2 {
+    font-family: 'Crimson Text', serif;
+    font-weight: 400;
+    font-size: clamp(1.6rem, 2.6vw, 2rem);
+    color: var(--ink-deep);
+    margin-bottom: 2.5rem;
+    letter-spacing: -0.005em;
+  }
+
+  /* SPARKS LIST */
+  .sparks { margin-bottom: 5vh; }
+  .spark {
+    display: grid;
+    grid-template-columns: 4rem 1fr;
+    gap: 1.5rem;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--rule);
+    align-items: start;
+  }
+  .spark:first-of-type { border-top: 1px solid var(--rule); }
+  .spark-num {
+    font-family: 'Crimson Text', serif;
+    font-style: italic;
+    font-size: 2.2rem;
+    color: var(--soft-taupe);
+    line-height: 0.9;
+    padding-top: 0.4rem;
+  }
+  .spark-tag {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--muted-brown);
+    margin-bottom: 0.7rem;
+    font-weight: 500;
+  }
+  .spark-line {
+    font-family: 'Crimson Text', serif;
+    font-size: clamp(1.2rem, 1.8vw, 1.45rem);
+    color: var(--ink-deep);
+    line-height: 1.45;
+    font-style: italic;
+    max-width: 50ch;
+  }
+
+  /* HERO SPARK */
+  .hero-spark {
+    margin: 6vh 0 5vh;
+    padding: 3rem 2.5rem;
+    background: var(--ink-deep);
+    color: var(--warm-white);
+    border-radius: 4px;
+  }
+  .hero-spark .lbl {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--soft-taupe);
+    margin-bottom: 1.2rem;
+  }
+  .hero-spark .open {
+    font-family: 'Crimson Text', serif;
+    font-style: italic;
+    font-size: clamp(1.3rem, 2.2vw, 1.75rem);
+    color: var(--warm-white);
+    line-height: 1.45;
+    margin-bottom: 1.6rem;
+    max-width: 48ch;
+  }
+  .hero-spark .note {
+    font-family: 'Crimson Text', serif;
+    font-size: 1.05rem;
+    color: var(--light-sand);
+    line-height: 1.6;
+    max-width: 55ch;
+  }
+  .hero-spark .close {
+    margin-top: 1.4rem;
+    padding-top: 1.4rem;
+    border-top: 1px solid rgba(245,243,239,0.15);
+    font-family: 'Crimson Text', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--warm-white);
+  }
+
+  /* AVOID BOX */
+  .avoid {
+    margin: 4vh 0 2vh;
+    padding: 1.5rem 1.8rem;
+    background: var(--paper);
+    border-left: 3px solid var(--dark-brown);
+    border-radius: 0 4px 4px 0;
+  }
+  .avoid .lbl {
+    font-family: 'Crimson Text', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--soft-taupe);
+    margin-bottom: 0.5rem;
+  }
+  .avoid p {
+    font-family: 'Crimson Text', serif;
+    font-size: 1.05rem;
+    color: var(--dark-brown);
+    line-height: 1.55;
+    max-width: 58ch;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 5vh 0 4vh;
+    text-align: left;
+    color: var(--muted-brown);
+    font-size: 0.78rem;
+    letter-spacing: 0.15em;
+    border-top: 1px solid var(--rule);
+    margin-top: 6vh;
+  }
+  footer .sig {
+    font-family: 'Crimson Text', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--dark-brown);
+    letter-spacing: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  @media (max-width: 600px) {
+    .spark { grid-template-columns: 1fr; gap: 0.5rem; }
+    .spark-num { font-size: 1.5rem; padding-top: 0; }
+    .hero-spark { padding: 2rem 1.6rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="banner">Internal · Evandr · For Katy</div>
+
+<div class="wrap">
+
+  <header>
+    <div class="mark">Evandr × Cody</div>
+    <h1>Video sparks for your trip.</h1>
+    <p class="deck">Five short ones to riff on. One hero for the homepage. Then go in your own flow.</p>
+  </header>
+
+  <!-- VIBE -->
+  <div class="vibe">
+    <div class="vibe-eyebrow">The vibe</div>
+    <p>You're fired up on data centers right now. That energy is the content. Don't script it. Press record and follow whichever spark lands.</p>
+    <p>The Evandr voice already lives on the site — senior, restrained, private. On camera you don't need to perform it. You already speak that way. Talk like you would on a private call with a CEO who just got bad news.</p>
+  </div>
+
+  <!-- FORMAT BASICS -->
+  <div class="basics">
+    <div class="basic">
+      <div class="lbl">Format</div>
+      <div class="val">Vertical phone. Lock exposure.</div>
+    </div>
+    <div class="basic">
+      <div class="lbl">Light</div>
+      <div class="val">Window in front, not behind.</div>
+    </div>
+    <div class="basic">
+      <div class="lbl">Framing</div>
+      <div class="val">Mid-chest. Sit or stand.</div>
+    </div>
+    <div class="basic">
+      <div class="lbl">Length</div>
+      <div class="val">60 to 90 seconds.</div>
+    </div>
+  </div>
+
+  <!-- SHORTS -->
+  <section class="sparks">
+    <div class="section-eyebrow">Five short sparks</div>
+    <h2>Pick the one that lands. Roll.</h2>
+
+    <div class="spark">
+      <div class="spark-num">01</div>
+      <div>
+        <div class="spark-tag">The wave</div>
+        <div class="spark-line">"There's a crisis wave coming for data center developers. Most of them don't see how fast."</div>
+      </div>
+    </div>
+
+    <div class="spark">
+      <div class="spark-num">02</div>
+      <div>
+        <div class="spark-tag">The first call</div>
+        <div class="spark-line">"In a crisis, the first 24 hours decide whether the project survives."</div>
+      </div>
+    </div>
+
+    <div class="spark">
+      <div class="spark-num">03</div>
+      <div>
+        <div class="spark-tag">Community ≠ PR</div>
+        <div class="spark-line">"Half the projects in crisis got there because someone confused community relations with public relations. They are not the same thing."</div>
+      </div>
+    </div>
+
+    <div class="spark">
+      <div class="spark-num">04</div>
+      <div>
+        <div class="spark-tag">The 49ers</div>
+        <div class="spark-line">"I worked the 49ers stadium fight in the late 90s. What I'm watching on data center projects right now is the same pattern. Just faster."</div>
+      </div>
+    </div>
+
+    <div class="spark">
+      <div class="spark-num">05</div>
+      <div>
+        <div class="spark-tag">Who I work with</div>
+        <div class="spark-line">"People keep asking me who Evandr is for. Here's the version I would give on a private call."</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERO SPARK -->
+  <section>
+    <div class="hero-spark">
+      <div class="lbl">One hero spark · For the homepage</div>
+      <div class="open">"Strategic communications is not what it was ten years ago. The stakes are higher. The timelines are shorter. The window to act is smaller. This is what Evandr is built for."</div>
+      <div class="note">Then go wherever feels natural — who you work with, what you've seen, what you're watching now. 90 seconds to 3 minutes.</div>
+      <div class="close">End with: "If you're stepping into a moment that matters, the conversation starts here."</div>
+    </div>
+  </section>
+
+  <!-- AVOID -->
+  <div class="avoid">
+    <div class="lbl">Not the Evandr voice</div>
+    <p>No "hey guys." No "viral," "trendy," "fun," "passion," "storytelling." No influencer cadence. Talk the way you talk on a board call.</p>
+  </div>
+
+  <p style="font-family: 'Crimson Text', serif; font-size: 1.05rem; color: var(--muted-brown); line-height: 1.6; max-width: 55ch; margin-top: 3rem;">Record several takes back to back if you want. Cody picks the strongest one. The point is volume of attempts, not perfect first takes.</p>
+
+  <footer>
+    <div class="sig">Have a good trip.</div>
+    <div>Drafted by Cody · 2026-05-12</div>
+  </footer>
+
+</div>
+
+</body>
+</html>

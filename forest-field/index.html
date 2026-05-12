@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forest Field · TikTok Inventory Clear · 10-Day Plan</title>
+<meta name="description" content="A 10-day TikTok-led push to clear remaining Forest Field inventory. From Ventari.">
+<meta name="theme-color" content="#1e3325">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --cream: #f5efe1;
+    --cream-soft: #ede5d2;
+    --moss-deep: #1e3325;
+    --moss: #2d4a36;
+    --moss-soft: #557556;
+    --earth: #8a6a3c;
+    --gold: #b8965f;
+    --bark: #2a1f15;
+    --line: rgba(30,51,37,0.18);
+  }
+
+  html, body {
+    font-family: 'Inter', sans-serif;
+    background: var(--cream);
+    color: var(--bark);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background:
+      radial-gradient(ellipse at 15% 20%, rgba(45,74,54,0.06) 0%, transparent 50%),
+      radial-gradient(ellipse at 85% 80%, rgba(138,106,60,0.05) 0%, transparent 45%);
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .wrap { position: relative; z-index: 1; max-width: 920px; margin: 0 auto; padding: 0 5vw; }
+
+  .banner {
+    background: var(--bark);
+    color: var(--cream);
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+  }
+
+  /* HEADER */
+  header {
+    padding: 6vh 0 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid var(--line);
+  }
+  .mark {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    letter-spacing: 0.45em;
+    text-transform: uppercase;
+    color: var(--moss-soft);
+    margin-bottom: 1.2rem;
+  }
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: clamp(2.4rem, 5vw, 3.6rem);
+    color: var(--moss-deep);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin-bottom: 1rem;
+  }
+  .subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+    color: var(--moss);
+    max-width: 56ch;
+    margin: 0 auto 2rem;
+  }
+  .meta {
+    display: inline-flex;
+    gap: 2rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--moss-soft);
+  }
+
+  /* SECTION TITLE */
+  .section-eyebrow {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--earth);
+    letter-spacing: 0.05em;
+    margin-bottom: 0.6rem;
+  }
+  h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: clamp(1.6rem, 2.6vw, 2rem);
+    color: var(--moss-deep);
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.005em;
+  }
+  section { padding: 5vh 0; border-bottom: 1px solid var(--line); }
+  section p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    line-height: 1.65;
+    color: var(--moss);
+    max-width: 60ch;
+  }
+
+  /* FRAME (the strategic frame at top) */
+  .frame {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+    margin: 4vh 0 5vh;
+    border: 1px solid var(--line);
+    background: var(--cream-soft);
+  }
+  @media (max-width: 700px) { .frame { grid-template-columns: 1fr; } }
+  .frame-cell {
+    padding: 1.6rem 1.5rem;
+    border-right: 1px solid var(--line);
+  }
+  .frame-cell:last-child { border-right: none; }
+  @media (max-width: 700px) {
+    .frame-cell { border-right: none; border-bottom: 1px solid var(--line); }
+    .frame-cell:last-child { border-bottom: none; }
+  }
+  .frame-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--moss-soft);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  .frame-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    color: var(--moss-deep);
+    line-height: 1.3;
+  }
+
+  /* DAY CARDS */
+  .days {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    margin-top: 2rem;
+  }
+  .day {
+    display: grid;
+    grid-template-columns: 6rem 1fr;
+    gap: 1.8rem;
+    padding: 1.6rem 1.8rem;
+    background: var(--cream-soft);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--moss);
+    border-radius: 4px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  @media (max-width: 600px) { .day { grid-template-columns: 1fr; gap: 0.8rem; padding: 1.3rem 1.4rem; } }
+  .day:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(30,51,37,0.08); }
+  .day-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--earth);
+    letter-spacing: 0.05em;
+    padding-top: 0.2rem;
+  }
+  .day-num small {
+    display: block;
+    font-style: normal;
+    font-size: 0.6rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--moss-soft);
+    margin-top: 0.3rem;
+  }
+  .day-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: var(--moss-deep);
+    margin-bottom: 0.5rem;
+    line-height: 1.25;
+  }
+  .day-body {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.92rem;
+    color: var(--bark);
+    line-height: 1.55;
+  }
+  .day-caption {
+    margin-top: 0.7rem;
+    padding-top: 0.7rem;
+    border-top: 1px dashed var(--line);
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--moss);
+    font-size: 1rem;
+  }
+
+  /* PHASE TWO box */
+  .phase-two {
+    margin-top: 2rem;
+    padding: 2rem 2rem;
+    background: var(--moss-deep);
+    color: var(--cream);
+    border-radius: 4px;
+  }
+  .phase-two h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 1.4rem;
+    margin-bottom: 0.4rem;
+  }
+  .phase-two .sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--gold);
+    font-size: 0.95rem;
+    margin-bottom: 1.3rem;
+  }
+  .phase-two ul { list-style: none; }
+  .phase-two ul li {
+    padding: 0.55rem 0 0.55rem 1.2rem;
+    border-bottom: 1px solid rgba(245,239,225,0.12);
+    font-size: 0.92rem;
+    position: relative;
+  }
+  .phase-two ul li:last-child { border-bottom: none; }
+  .phase-two ul li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+  }
+
+  /* TABLES (channel map, mechanics) */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.88rem;
+  }
+  th {
+    background: transparent;
+    border-bottom: 2px solid var(--moss-deep);
+    text-align: left;
+    padding: 0.7rem 0.8rem 0.7rem 0;
+    font-weight: 500;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--moss-soft);
+  }
+  td {
+    padding: 0.85rem 0.8rem 0.85rem 0;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+    line-height: 1.5;
+    color: var(--bark);
+  }
+  td strong { color: var(--moss-deep); font-weight: 600; }
+
+  /* CHECKLIST */
+  .checklist-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+    margin-top: 2rem;
+  }
+  @media (max-width: 600px) { .checklist-grid { grid-template-columns: 1fr; } }
+  .check-item {
+    padding: 1rem 1.2rem;
+    background: var(--cream-soft);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: 1.5rem 1fr;
+    gap: 0.7rem;
+    font-size: 0.92rem;
+    align-items: start;
+  }
+  .check-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--earth);
+    font-size: 1.1rem;
+    line-height: 1;
+    padding-top: 2px;
+  }
+  .check-item strong { color: var(--moss-deep); font-weight: 600; display: block; margin-bottom: 0.2rem; }
+
+  /* OWNERSHIP block */
+  .ownership {
+    margin-top: 2rem;
+    padding: 1.8rem 2rem;
+    background: var(--cream-soft);
+    border-left: 4px solid var(--gold);
+    border-radius: 4px;
+  }
+  .ownership h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: var(--moss-deep);
+    margin-bottom: 0.8rem;
+  }
+  .ownership ul {
+    font-family: 'Inter', sans-serif;
+    list-style: none;
+  }
+  .ownership ul li {
+    padding: 0.4rem 0;
+    font-size: 0.9rem;
+    color: var(--bark);
+    position: relative;
+    padding-left: 1.2rem;
+  }
+  .ownership ul li::before {
+    content: '·';
+    position: absolute;
+    left: 0.4rem;
+    color: var(--gold);
+    font-weight: 700;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 5vh 0 3vh;
+    text-align: center;
+    color: var(--moss-soft);
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    font-family: 'Inter', sans-serif;
+  }
+  footer .sig {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--moss);
+    letter-spacing: 0;
+    margin-bottom: 0.6rem;
+  }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 2.2rem; }
+    section { padding: 4vh 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="banner">Internal · Forest Field · Ventari · 2026-05-12</div>
+
+<div class="wrap">
+
+  <header>
+    <div class="mark">Forest Field × Ventari</div>
+    <h1>The 10-Day Inventory Clear</h1>
+    <p class="subtitle">A TikTok-led push to move remaining inventory before this line wraps. Urgent, honest, ritual-forward. Not a brand campaign — a closeout disguised as a brand moment.</p>
+    <div class="meta">
+      <span>10 Days</span>
+      <span>TikTok-led</span>
+      <span>One URL</span>
+    </div>
+  </header>
+
+  <!-- STRATEGIC FRAME -->
+  <section>
+    <div class="section-eyebrow">The frame</div>
+    <h2>Three levers. Every post pulls one.</h2>
+    <div class="frame">
+      <div class="frame-cell">
+        <div class="frame-label">Lever 01</div>
+        <div class="frame-value">Urgency</div>
+        <p style="font-family: Inter; font-size: 0.85rem; margin-top: 0.6rem; color: var(--bark);">The line is wrapping. Inventory carrying costs climb daily.</p>
+      </div>
+      <div class="frame-cell">
+        <div class="frame-label">Lever 02</div>
+        <div class="frame-value">Scarcity</div>
+        <p style="font-family: Inter; font-size: 0.85rem; margin-top: 0.6rem; color: var(--bark);">Final batches. Real counter. No invented numbers.</p>
+      </div>
+      <div class="frame-cell">
+        <div class="frame-label">Lever 03</div>
+        <div class="frame-value">Authority</div>
+        <p style="font-family: Inter; font-size: 0.95rem; margin-top: 0.6rem; color: var(--bark); font-family: Cormorant Garamond; font-style: italic;">Katy on tape. Real voice on a real product.</p>
+      </div>
+    </div>
+    <p>Forty units moved in two weeks at full price with no campaign behind them. With content velocity and a real offer attached, ten times that is on the table. Goal: shelf cleared by day ten. Reassess after.</p>
+  </section>
+
+  <!-- DAY BY DAY -->
+  <section>
+    <div class="section-eyebrow">The plan</div>
+    <h2>Day by day.</h2>
+
+    <div class="days">
+      <div class="day">
+        <div class="day-num">Day 01<small>The hook</small></div>
+        <div>
+          <div class="day-title">The honest opening</div>
+          <div class="day-body">Product on a wooden surface, natural light, hands packing. Cut to forest setting. 30 to 45 seconds, vertical.</div>
+          <div class="day-caption">"This is the last of it. After this batch sells through, Forest Field is gone."</div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-num">Day 02<small>The why</small></div>
+        <div>
+          <div class="day-title">What it actually does</div>
+          <div class="day-body">Talking-head plus B-roll. Voiceover on the one specific thing the product does — vagus nerve, nervous system reset. Concrete, not vague. 60 to 90 seconds.</div>
+          <div class="day-caption">"It was built to do one thing. Last batch live — 25% off final inventory."</div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-num">Day 3–4<small>The offer</small></div>
+        <div>
+          <div class="day-title">Bundle pricing drops</div>
+          <div class="day-body">
+            <strong>1 unit · 20% off</strong> &nbsp; / &nbsp; <strong>2 units · 30% off + free shipping</strong> &nbsp; / &nbsp; <strong>3+ units · 40% off + free shipping + digital bonus</strong>
+          </div>
+          <div class="day-caption">"Stocking up for the last time. Bundle pricing on the final drop."</div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-num">Day 5–6<small>The insider</small></div>
+        <div>
+          <div class="day-title">Why we're closing this line</div>
+          <div class="day-body">Talking head — Katy if available, otherwise Kaylee. Forest Field tested. This one did its job. We're building what's next. Last chance at this formula.</div>
+          <div class="day-caption">"Not every product gets a forever spot. Tell us what we should build next."</div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-num">Day 7–8<small>The proof</small></div>
+        <div>
+          <div class="day-title">Scarcity counter, on screen</div>
+          <div class="day-body">Boxed orders going out. Live count: "[X] units left of [Y]." Updated daily. Real numbers only.</div>
+          <div class="day-caption">"[X] units left. Once they're gone, that's it."</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="phase-two">
+      <h3>Days 8–10 · Velocity push</h3>
+      <div class="sub">If the shelf hasn't cleared, these stack on:</div>
+      <ul>
+        <li>Email blast to Forest Field list: "48 hours. Last batch. Final pricing."</li>
+        <li>TikTok Lives — 15 minutes daily. Show remaining units. Answer questions live.</li>
+        <li>IG Stories takeover with daily countdown and swipe-up to product.</li>
+        <li>DMs to anyone who commented on prior posts: bundle offer with code.</li>
+        <li>Creator seeding — 5 to 10 units to micro-creators in wellness, sleep, nervous system niche.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CHANNEL MAP -->
+  <section>
+    <div class="section-eyebrow">Where it lives</div>
+    <h2>Channel map.</h2>
+    <table>
+      <thead>
+        <tr><th>Channel</th><th>Role</th><th>Cadence</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>TikTok</strong></td><td>Primary content channel</td><td>1 anchor + 1–2 follow-ups daily</td></tr>
+        <tr><td><strong>Instagram Reels</strong></td><td>Cross-post</td><td>Same content, repurposed</td></tr>
+        <tr><td><strong>Instagram Stories</strong></td><td>Daily countdown + proof</td><td>Daily</td></tr>
+        <tr><td><strong>Email</strong></td><td>Major push days</td><td>Days 3, 6, 9</td></tr>
+        <tr><td><strong>Shopify banner</strong></td><td>Continuous urgency</td><td>"Final batch — [X] left"</td></tr>
+        <tr><td><strong>Amazon</strong> (if FBM live)</td><td>Match pricing, mark limited stock</td><td>Update Day 1</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- CONVERSION MECHANICS -->
+  <section>
+    <div class="section-eyebrow">Set up before Day 1</div>
+    <h2>Conversion mechanics.</h2>
+    <div class="checklist-grid">
+      <div class="check-item">
+        <div class="check-num">01</div>
+        <div><strong>One landing URL.</strong> All CTAs to the same Shopify product page. No fragmented funnels.</div>
+      </div>
+      <div class="check-item">
+        <div class="check-num">02</div>
+        <div><strong>Auto-applied discount.</strong> URL parameter so customers don't type a code.</div>
+      </div>
+      <div class="check-item">
+        <div class="check-num">03</div>
+        <div><strong>Visible stock counter.</strong> Real numbers via a Shopify scarcity app.</div>
+      </div>
+      <div class="check-item">
+        <div class="check-num">04</div>
+        <div><strong>Exit-intent popup.</strong> Capture bouncers for the next launch list.</div>
+      </div>
+      <div class="check-item">
+        <div class="check-num">05</div>
+        <div><strong>Post-purchase upsell.</strong> Add remaining SKU one-click at 50% off.</div>
+      </div>
+      <div class="check-item">
+        <div class="check-num">06</div>
+        <div><strong>Brand-safe wellness claims.</strong> "Supports relaxation" yes. "Cures insomnia" no.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT TEAM NEEDS TO CONFIRM -->
+  <section>
+    <div class="section-eyebrow">Need from the Forest Field team</div>
+    <h2>Six confirmations to lock the plan.</h2>
+    <div class="ownership">
+      <ul>
+        <li><strong>01 · Discount latitude.</strong> Bundle ladder approved (20 / 30 / 40 percent)? If not, what's the max?</li>
+        <li><strong>02 · Channel scope.</strong> TikTok Shop, Shopify, and Amazon all at once, or one primary channel?</li>
+        <li><strong>03 · Inventory math.</strong> Total units remaining and where they sit.</li>
+        <li><strong>04 · Creator seeding budget.</strong> 5 to 10 units to micro-creators, or skip and go organic?</li>
+        <li><strong>05 · Email lists.</strong> What email lists do we currently have to market to?</li>
+        <li><strong>06 · Ad spend.</strong> Any paid budget approved, or organic-only?</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- WHAT VENTARI OWNS -->
+  <section>
+    <div class="section-eyebrow">Once confirmed</div>
+    <h2>Ventari executes.</h2>
+    <div class="ownership">
+      <h3>From Day 0 forward, Cody owns:</h3>
+      <ul>
+        <li>Shopify scarcity widgets + URL discount setup</li>
+        <li>Days 1–5 content production (Kaylee on camera where she fits, Katy's voiceover layered on Day 1)</li>
+        <li>TikTok scheduling, daily counter updates, daily Story posts</li>
+        <li>Email sends on Days 3, 6, 9</li>
+        <li>Creator seeding coordination if approved</li>
+        <li>Daily numbers reported back to Katy and Kaylee by 9pm Eastern</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <div class="sig">Bring the forest home. One last time.</div>
+    <div>Drafted by Ventari · 2026-05-12</div>
+  </footer>
+
+</div>
+
+</body>
+</html>
