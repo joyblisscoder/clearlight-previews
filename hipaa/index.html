@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luxe Rejuvenate | Marketing Compliance Overview — HIPAA, Meta, FDA, Florida</title>
+<meta name="description" content="Operational compliance reference for Luxe Rejuvenate marketing decisions. HIPAA, Meta ad policy, FDA peptide rules, Florida medical practice rules, FTC endorsements.">
+<meta name="theme-color" content="#1c2a39">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #fafaf8;
+    --paper: #ffffff;
+    --ink: #1a2332;
+    --ink-soft: #4a5568;
+    --ink-faint: #8b94a3;
+    --rule: #e2e6ec;
+    --rule-soft: #eef0f4;
+    --accent: #1c2a39;
+    --warn: #b94632;
+    --warn-bg: #fdf5f3;
+    --safe: #2f6e4a;
+    --safe-bg: #f1f7f3;
+    --caution: #a07a1e;
+    --caution-bg: #fbf6ea;
+  }
+
+  html, body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .doc {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 6vw;
+    background: var(--paper);
+    box-shadow: 0 1px 4px rgba(20,30,50,0.04);
+  }
+
+  /* HEADER */
+  .top {
+    padding: 5vh 0 3vh;
+    border-bottom: 2px solid var(--ink);
+    margin-bottom: 4vh;
+  }
+  .top .label {
+    font-size: 0.7rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+  }
+  .top h1 {
+    font-family: 'Crimson Text', serif;
+    font-weight: 600;
+    font-size: clamp(1.9rem, 3.5vw, 2.6rem);
+    color: var(--ink);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    letter-spacing: -0.01em;
+  }
+  .top .deck {
+    font-family: 'Crimson Text', serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--ink-soft);
+    max-width: 60ch;
+    margin-bottom: 1.5rem;
+  }
+  .meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem 3rem;
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+  }
+  .meta-row strong { color: var(--ink); font-weight: 600; }
+
+  /* SECTION HEADERS */
+  h2.section {
+    font-family: 'Crimson Text', serif;
+    font-weight: 600;
+    font-size: clamp(1.4rem, 2.2vw, 1.7rem);
+    color: var(--ink);
+    margin: 5vh 0 1.5rem;
+    padding-bottom: 0.7rem;
+    border-bottom: 1px solid var(--rule);
+    letter-spacing: -0.005em;
+  }
+  h2.section .num {
+    display: inline-block;
+    width: 2.5rem;
+    color: var(--ink-faint);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+  h3.sub {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1.02rem;
+    color: var(--ink);
+    margin: 2.5rem 0 0.8rem;
+  }
+
+  /* BODY COPY */
+  p {
+    font-family: 'Crimson Text', serif;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--ink);
+    margin-bottom: 1.2rem;
+    max-width: 68ch;
+  }
+  p.intro {
+    font-size: 1.15rem;
+    color: var(--ink-soft);
+  }
+  ul, ol {
+    margin: 0.5rem 0 1.5rem 1.5rem;
+    font-family: 'Crimson Text', serif;
+    font-size: 1.08rem;
+    line-height: 1.7;
+    color: var(--ink);
+  }
+  ul li, ol li { margin-bottom: 0.45rem; max-width: 65ch; }
+  strong { color: var(--ink); font-weight: 600; }
+
+  /* CALLOUT BOXES */
+  .callout {
+    margin: 1.8rem 0;
+    padding: 1.3rem 1.5rem;
+    border-left: 4px solid;
+    border-radius: 4px;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .callout.warn { background: var(--warn-bg); border-color: var(--warn); }
+  .callout.safe { background: var(--safe-bg); border-color: var(--safe); }
+  .callout.caution { background: var(--caution-bg); border-color: var(--caution); }
+  .callout .label {
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+  }
+  .callout.warn .label { color: var(--warn); }
+  .callout.safe .label { color: var(--safe); }
+  .callout.caution .label { color: var(--caution); }
+  .callout p { font-family: 'DM Sans', sans-serif; font-size: 0.95rem; margin: 0; line-height: 1.55; color: var(--ink); max-width: none; }
+  .callout p + p { margin-top: 0.6rem; }
+
+  /* EXEC SUMMARY CARDS */
+  .exec {
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.7rem;
+  }
+  .exec-item {
+    display: grid;
+    grid-template-columns: 2.5rem 1fr;
+    gap: 1rem;
+    padding: 1rem 1.2rem;
+    background: rgba(28,42,57,0.04);
+    border-radius: 6px;
+    align-items: start;
+  }
+  .exec-num {
+    font-family: 'Crimson Text', serif;
+    font-style: italic;
+    font-size: 1.4rem;
+    color: var(--ink-faint);
+    line-height: 1;
+  }
+  .exec-text {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--ink);
+  }
+  .exec-text strong { color: var(--ink); }
+
+  /* TABLES */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+  }
+  th {
+    background: var(--ink);
+    color: var(--paper);
+    text-align: left;
+    padding: 0.85rem 1rem;
+    font-weight: 500;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  td {
+    padding: 0.95rem 1rem;
+    border-bottom: 1px solid var(--rule-soft);
+    vertical-align: top;
+    line-height: 1.5;
+  }
+  tr:last-child td { border-bottom: 1px solid var(--ink); }
+  td.status-warn { color: var(--warn); font-weight: 600; }
+  td.status-safe { color: var(--safe); font-weight: 600; }
+  td.status-caution { color: var(--caution); font-weight: 600; }
+
+  /* RULES BAR */
+  .rules-bar {
+    margin: 5vh 0 2vh;
+    padding: 2rem;
+    background: var(--ink);
+    color: var(--paper);
+    border-radius: 6px;
+  }
+  .rules-bar h3 {
+    font-family: 'Crimson Text', serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: var(--paper);
+    margin-bottom: 1.2rem;
+  }
+  .rules-bar ol {
+    color: var(--paper);
+    margin-left: 1.5rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+  }
+  .rules-bar ol li { margin-bottom: 0.55rem; }
+  .rules-bar ol li strong { color: #f3e5b8; }
+
+  /* SAFE VS UNSAFE GRID */
+  .compare {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+  @media (max-width: 600px) { .compare { grid-template-columns: 1fr; } }
+  .compare-col {
+    padding: 1.3rem;
+    border-radius: 6px;
+  }
+  .compare-col.unsafe { background: var(--warn-bg); border: 1px solid rgba(185,70,50,0.2); }
+  .compare-col.safe { background: var(--safe-bg); border: 1px solid rgba(47,110,74,0.2); }
+  .compare-col h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-bottom: 0.9rem;
+    font-weight: 600;
+  }
+  .compare-col.unsafe h4 { color: var(--warn); }
+  .compare-col.safe h4 { color: var(--safe); }
+  .compare-col ul { font-family: 'DM Sans', sans-serif; font-size: 0.9rem; margin: 0; padding-left: 1.1rem; }
+  .compare-col li { margin-bottom: 0.5rem; line-height: 1.5; max-width: none; }
+
+  /* CHECKLIST */
+  .checklist {
+    background: var(--bg);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 2rem;
+    margin: 3vh 0 5vh;
+  }
+  .checklist h3 {
+    font-family: 'Crimson Text', serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+  .checklist .small {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    margin-bottom: 1.5rem;
+  }
+  .check-row {
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    gap: 0.7rem;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid var(--rule-soft);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.93rem;
+    align-items: start;
+  }
+  .check-row:last-child { border-bottom: none; }
+  .check-row .box {
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--ink);
+    border-radius: 3px;
+    margin-top: 2px;
+  }
+
+  /* FOOTER */
+  footer {
+    margin-top: 6vh;
+    padding: 4vh 0 5vh;
+    border-top: 1px solid var(--rule);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    color: var(--ink-faint);
+    line-height: 1.6;
+  }
+  footer p { font-family: 'DM Sans', sans-serif; font-size: 0.82rem; color: var(--ink-faint); margin-bottom: 0.5rem; max-width: none; }
+  footer strong { color: var(--ink-soft); }
+
+  /* PREVIEW BANNER */
+  .preview-banner {
+    background: var(--ink);
+    color: var(--paper);
+    text-align: center;
+    padding: 0.5rem 1rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+
+<div class="preview-banner">Internal Reference — Luxe Rejuvenate Compliance — Not Patient-Facing</div>
+
+<div class="doc">
+
+  <!-- TOP -->
+  <div class="top">
+    <div class="label">Luxe Rejuvenate · Marketing Compliance Brief</div>
+    <h1>HIPAA, Meta Ads, FDA, Florida.<br>What ships, what does not.</h1>
+    <div class="deck">Operational reference for everything that hits the Luxe Rejuvenate website, ads, or social. Run copy and creative against this document before anything goes live. Built from the 2026-05-11 compliance research.</div>
+    <div class="meta-row">
+      <div><strong>Prepared for</strong> Victoria, Cody, Michelle</div>
+      <div><strong>Updated</strong> 2026-05-12</div>
+      <div><strong>Source</strong> Compliance-Research-HIPAA-Meta-FDA.md</div>
+    </div>
+  </div>
+
+  <!-- EXECUTIVE SUMMARY -->
+  <h2 class="section"><span class="num">01.</span>Executive Summary</h2>
+  <p class="intro">Seven things every person touching Luxe Rejuvenate marketing needs to know. The rest of the document is the longer version.</p>
+
+  <div class="exec">
+    <div class="exec-item">
+      <div class="exec-num">1</div>
+      <div class="exec-text"><strong>Luxe Rejuvenate is a HIPAA covered entity.</strong> Treat every patient photo, name, treatment outcome, review from a chart, or session list as PHI. PHI cannot be used without a signed HIPAA marketing authorization from the patient.</div>
+    </div>
+    <div class="exec-item">
+      <div class="exec-num">2</div>
+      <div class="exec-text"><strong>The Meta Pixel does not belong on booking, confirmation, or patient-portal pages.</strong> Meta will not sign a Business Associate Agreement. Use server-side Conversions API with hashed, de-identified top-of-funnel events only. Never send Lead, Schedule, or Purchase events from a treatment flow.</div>
+    </div>
+    <div class="exec-item">
+      <div class="exec-num">3</div>
+      <div class="exec-text"><strong>Meta categorizes Luxe Rejuvenate as Health & Wellness.</strong> That blocks bottom-funnel conversion optimization (no Purchase, Lead, or Schedule optimization), restricts before/after photos, and prohibits personal-attribute copy ("Tired? Struggling with X?"). Bottom-of-funnel work happens in email and SMS, not Meta auction.</div>
+    </div>
+    <div class="exec-item">
+      <div class="exec-num">4</div>
+      <div class="exec-text"><strong>Compounded GLP-1s and most peptides are effectively un-advertisable right now.</strong> Semaglutide and tirzepatide are post-shortage and FDA is proposing permanent 503B exclusion. BPC-157 and 13 other peptides are Category 2 pending July 2026 PCAC review. Do not name them in ads or on the site by brand. NAD+ remains legally compoundable.</div>
+    </div>
+    <div class="exec-item">
+      <div class="exec-num">5</div>
+      <div class="exec-text"><strong>Florida requires an MD or DO as medical director for IV therapy.</strong> Palumbo D.O. fills the role on paper. Clinic licensure status under Fla. Stat. 400.9905 needs to be confirmed before paid traffic ramps. Open question: physician-owned exemption or AHCA Health Care Clinic License.</div>
+    </div>
+    <div class="exec-item">
+      <div class="exec-num">6</div>
+      <div class="exec-text"><strong>The FTC removed the "results not typical" safe harbor in 2023.</strong> Every testimonial must show results a typical customer would actually get, or the ad must state typical results clearly. Material connections (employees, comped clients, paid influencers) must be disclosed clearly.</div>
+    </div>
+    <div class="exec-item">
+      <div class="exec-num">7</div>
+      <div class="exec-text"><strong>Florida requires a specific 72-hour-refund disclaimer on any ad offering free or discounted services.</strong> Fla. Stat. 456.062. Required in 6pt Times New Roman or larger in print, 15-second visual/verbal disclosure in video. Applies to any "first visit free," "$50 off intro," "Sip Drip Glow intro pricing."</div>
+    </div>
+  </div>
+
+  <!-- THE THREE NEVERS -->
+  <div class="rules-bar">
+    <h3>The three nevers (paste these on the wall)</h3>
+    <ol>
+      <li><strong>Never name a prescription drug by brand</strong> in ads or on the site (Ozempic, Wegovy, Mounjaro, Zepbound, etc.) without LegitScript Certification. Same for peptides by name until FDA reclassification is final.</li>
+      <li><strong>Never use a real patient's name, face, or treatment outcome</strong> without a signed HIPAA marketing authorization on file. Aggregated review counts ("300+ five-star Google ratings") are fine. Specific patient stories are not, without paperwork.</li>
+      <li><strong>Never make a disease claim.</strong> "Supports relaxation," "Designed for recovery," "Replenishes fluids and electrolytes" are defensible structure/function claims. "Cures," "Treats," "Reverses," "Prevents" are not.</li>
+    </ol>
+  </div>
+
+  <!-- HIPAA -->
+  <h2 class="section"><span class="num">02.</span>HIPAA · Patient Privacy</h2>
+
+  <h3 class="sub">Why HIPAA applies to Luxe Rejuvenate</h3>
+  <p>Luxe Rejuvenate is a medical practice with a Medical Director (Palumbo D.O.), a Pharmacist (Urbatchka), and an R.N. owner (Franklin). It administers IVs, peptides, and injectables, and processes payment for medical services. Even if billing is cash-only, the standard assumption for any medical practice marketing engagement is to operate as a HIPAA covered entity. Ventari becomes a Business Associate the moment we touch any PHI on Luxe's behalf, which requires a signed BAA on file.</p>
+
+  <h3 class="sub">What counts as PHI in a marketing context</h3>
+  <ul>
+    <li>Patient names tied to a treatment received</li>
+    <li>Before-and-after photos identifiable to a person</li>
+    <li>Video testimonials, chart-derived results</li>
+    <li>Appointment confirmations, booking activity, post-purchase receipts</li>
+    <li>IP addresses combined with a visit to a specific treatment page</li>
+    <li>Anything that ties a real person to having received care from Luxe Rejuvenate</li>
+  </ul>
+  <p><strong>Not PHI:</strong> aggregated and de-identified data (e.g., "300+ clients with a 5-star average Google rating"). That is a factual summary of public reviews, not a patient story.</p>
+
+  <h3 class="sub">What a valid HIPAA marketing authorization looks like</h3>
+  <ul>
+    <li>Specific description of the information used (e.g., "before and after photos of my abdomen on [date]")</li>
+    <li>Who is authorized to use it (Luxe Rejuvenate) and who receives it (Meta, Ventari, public web visitors)</li>
+    <li>Each purpose of the use (Meta advertising, display on luxerejuvenate.com, etc.)</li>
+    <li>Expiration date or expiration event</li>
+    <li>Clear statement of the patient's right to revoke in writing, and how</li>
+    <li>Signature and date</li>
+  </ul>
+
+  <div class="callout warn">
+    <div class="label">Enforcement is active</div>
+    <p>In September 2025, OCR cited Cadia Healthcare for sharing 150 patient stories online without valid written permission. Penalties scale per record. The willful-neglect tier ranges from $13,785 to $2,134,831 per violation per year.</p>
+  </div>
+
+  <!-- ONLINE TRACKING -->
+  <h2 class="section"><span class="num">03.</span>HIPAA · Online Tracking (Meta Pixel, GA)</h2>
+
+  <p>The single largest landmine in the Luxe Rejuvenate marketing stack. HHS issued tracking-tech guidance in December 2022, expanded it in March 2024, then a Texas federal court (American Hospital Association v. Becerra, June 2024) vacated the IP-plus-condition-visit portion. The remaining guidance still applies to booking flows, patient portals, and confirmation pages.</p>
+
+  <table>
+    <thead>
+      <tr><th>Page Type</th><th>Tracking Risk</th><th>Recommended Posture</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Home, About, generic info</strong></td>
+        <td class="status-safe">Low</td>
+        <td>Standard Meta Pixel acceptable. Recommend Consent Mode or clear cookie banner per state privacy laws.</td>
+      </tr>
+      <tr>
+        <td><strong>Service pages (Peptides, NAD+, Beauty IV, etc.)</strong></td>
+        <td class="status-caution">Moderate</td>
+        <td>Server-side Conversions API only. Hashed, minimum-necessary data. No client-side Pixel-only firing. Suppress booking events.</td>
+      </tr>
+      <tr>
+        <td><strong>Booking, confirmation, post-purchase</strong></td>
+        <td class="status-warn">High</td>
+        <td>No third-party pixels. No Meta Pixel. No standard Google Analytics. Use HIPAA-compliant analytics vendor with signed BAA (Freshpaint, Aptible, Piwik PRO).</td>
+      </tr>
+      <tr>
+        <td><strong>Inside logged-in patient portal</strong></td>
+        <td class="status-warn">Maximum</td>
+        <td>Zero third-party tracking. Full audit. Everything fired here is PHI by default.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout warn">
+    <div class="label">Meta will not sign a BAA</div>
+    <p>Confirmed in their advertising terms. Any data that qualifies as PHI cannot be sent to the Meta Pixel or Conversions API without violating HIPAA. The architecture has to keep PHI out of whatever Meta receives.</p>
+    <p><strong>Customer list uploads (Custom Audiences):</strong> uploading Luxe Rejuvenate patient phone numbers or emails to Meta for targeting is a HIPAA disclosure. Practical answer: do not upload patient lists. Build Meta audiences only from non-PHI sources (page engagers, video viewers).</p>
+  </div>
+
+  <h3 class="sub">Recommended tracking stack for launch</h3>
+  <ul>
+    <li>Replace standard Meta Pixel with Meta Conversions API gateway, server-side, sending only de-identified, hashed top-of-funnel events (PageView, ContentView).</li>
+    <li>Never send Lead, Schedule, Complete Registration, or Purchase events from booking or patient flows.</li>
+    <li>Use a HIPAA-compliant analytics tool with a signed BAA for any treatment-page or booking-page measurement. Freshpaint specifically offers a HIPAA-compliant Meta Pixel and Google Analytics layer.</li>
+    <li>Build a documented data flow map. Have Luxe Rejuvenate's medical director sign off before launch.</li>
+  </ul>
+
+  <!-- META ADS -->
+  <h2 class="section"><span class="num">04.</span>Meta Advertising · Health & Wellness Restrictions</h2>
+
+  <p>In January-February 2025, Meta categorized Health & Wellness brands and applied advertising restrictions across the entire category. Luxe Rejuvenate qualifies on all three Meta triggers: associated with medical conditions, specific health statuses, and provider/patient relationships.</p>
+
+  <h3 class="sub">What is restricted</h3>
+  <ul>
+    <li><strong>No bottom-funnel conversion optimization.</strong> Cannot optimize for Purchase, Lead, Schedule, Complete Registration, or Add to Cart at the account level. Optimization limited to Landing Page View, Engagement, Reach.</li>
+    <li><strong>No conversion-based audience building.</strong> Cannot build Custom Audiences from purchase or booking events.</li>
+    <li><strong>Personal attribute restrictions.</strong> No copy or creative that asserts or implies the viewer has a specific health condition or attribute.</li>
+    <li><strong>Before-and-after imagery restricted.</strong> Side-by-side comparisons implying medical outcomes are blocked.</li>
+    <li><strong>Lookalike audiences off PHI-derived seeds prohibited.</strong></li>
+    <li><strong>Second wave (early 2026):</strong> additional restrictions on lead-gen for physician practices and behavioral health clinics, rolling out now.</li>
+  </ul>
+
+  <h3 class="sub">Personal attribute violations (the most common rejection reason)</h3>
+  <div class="compare">
+    <div class="compare-col unsafe">
+      <h4>Triggers rejection</h4>
+      <ul>
+        <li>"Tired of feeling exhausted? Energy IV at your door."</li>
+        <li>"Struggling with belly fat?"</li>
+        <li>"Are you over 40 and noticing sagging skin?"</li>
+        <li>Before image of visible fatigue/weight/acne/aging next to corrected after image</li>
+      </ul>
+    </div>
+    <div class="compare-col safe">
+      <h4>Passes</h4>
+      <ul>
+        <li>"Luxury IV therapy, mobile to your door in Tampa."</li>
+        <li>"Wellness, recovery, and performance, delivered."</li>
+        <li>"Licensed clinicians. Custom formulations. Your home, your hotel, your office."</li>
+        <li>Lifestyle imagery of the mobile service in action, the IV bag with branding, the medical team</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout caution">
+    <div class="label">What this means for the funnel</div>
+    <p>Top-funnel campaigns (brand awareness, traffic, video views) work as normal. Conversion campaigns optimizing for booking will be disabled or heavily throttled. The bottom half of the funnel lives in email and SMS, not in Meta's auction-side optimization. SEO and organic content matter more for this brand than for typical consumer e-commerce.</p>
+  </div>
+
+  <!-- DRUGS -->
+  <h2 class="section"><span class="num">05.</span>Meta Advertising · Prescription Drugs and Peptides</h2>
+
+  <p>Meta's Drugs and Pharmaceuticals policy is layered on top of Health & Wellness. Direct-to-consumer Rx ads are allowed in the U.S., but only with appropriate licensure and LegitScript Certification when prescription drugs are named.</p>
+
+  <h3 class="sub">What requires LegitScript Certification to name in ads</h3>
+  <ul>
+    <li>GLP-1 brand names: Ozempic, Wegovy, Mounjaro, Zepbound</li>
+    <li>Compounded GLP-1 references: semaglutide, tirzepatide</li>
+    <li>Any peptide meeting the drug classification (BPC-157, GHK-Cu, etc.)</li>
+  </ul>
+
+  <h3 class="sub">Recommended copy strategy until LegitScript is in place</h3>
+  <div class="compare">
+    <div class="compare-col unsafe">
+      <h4>Avoid</h4>
+      <ul>
+        <li>"Lose weight with semaglutide"</li>
+        <li>"BPC-157 for recovery"</li>
+        <li>"Botox $12/unit"</li>
+      </ul>
+    </div>
+    <div class="compare-col safe">
+      <h4>Use instead</h4>
+      <ul>
+        <li>"Personalized wellness consultation, mobile to your door"</li>
+        <li>"Recovery-focused peptide therapy, prescribed and supervised by licensed clinicians"</li>
+        <li>"Wrinkle-relaxing injections, mobile service, licensed RN"</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- FDA PEPTIDES -->
+  <h2 class="section"><span class="num">06.</span>FDA · Compounded Peptides and Bulk Drug Substances</h2>
+
+  <p>The highest-risk service line. Compounded peptides cannot be advertised, dispensed, or administered legally unless the bulk drug substance is on FDA's 503A or 503B bulks list, or is FDA-approved as a finished drug, or has a USP monograph, or is in Category 1 of the interim 503A bulks list.</p>
+
+  <h3 class="sub">Current status by substance (as of May 11, 2026)</h3>
+  <table>
+    <thead>
+      <tr><th>Substance</th><th>Status</th><th>Marketing Implication</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Semaglutide (compounded)</strong></td>
+        <td class="status-warn">Effectively prohibited</td>
+        <td>Do not advertise. Do not list on the website. Do not name in any creative.</td>
+      </tr>
+      <tr>
+        <td><strong>Tirzepatide (compounded)</strong></td>
+        <td class="status-warn">Same</td>
+        <td>Same.</td>
+      </tr>
+      <tr>
+        <td><strong>GLP-1 brand names</strong></td>
+        <td class="status-caution">Conditional</td>
+        <td>Only if Luxe has FDA-approved product through legitimate supply chain + LegitScript Certification.</td>
+      </tr>
+      <tr>
+        <td><strong>BPC-157, GHK-Cu</strong></td>
+        <td class="status-caution">Category 2, pending July 2026 review</td>
+        <td>Do not market by name until FDA reclassification is final and confirmed in Federal Register.</td>
+      </tr>
+      <tr>
+        <td><strong>NAD+</strong></td>
+        <td class="status-safe">Legally compoundable</td>
+        <td>Allowed to market, subject to Meta Health & Wellness rules and FDA disease-claim limits.</td>
+      </tr>
+      <tr>
+        <td><strong>Sermorelin</strong></td>
+        <td class="status-safe">Legally compoundable</td>
+        <td>Same as NAD+.</td>
+      </tr>
+      <tr>
+        <td><strong>Other Category 2 peptides not on reclassification list</strong></td>
+        <td class="status-warn">Not compoundable</td>
+        <td>Do not market.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout caution">
+    <div class="label">For the /peptides landing page</div>
+    <p>Lead with the category benefit: "peptide therapy for recovery, performance, sleep, longevity." Route specifics to a consultation. Do not name peptides on the page until July 2026 PCAC review and Federal Register notice. LegitScript Certification needed before naming peptides in any Meta ad.</p>
+    <p>Before any peptide-specific copy ships, Katy or Michelle confirms which peptides Luxe's pharmacy partner (Urbatchka) is actually compounding right now and what FDA category each falls into.</p>
+  </div>
+
+  <!-- STRUCTURE/FUNCTION VS DISEASE -->
+  <h2 class="section"><span class="num">07.</span>FDA · Structure/Function vs. Disease Claims</h2>
+
+  <p>Even for legal-to-compound substances, what Luxe Rejuvenate can claim about them is regulated. Only an FDA-approved drug can make a disease claim. Compounded medications, dietary ingredients, and IV formulations not FDA-approved for a disease cannot make disease claims without triggering FDA misbranding and FTC deceptive-advertising risk.</p>
+
+  <div class="compare">
+    <div class="compare-col unsafe">
+      <h4>Disease claims · NOT allowed</h4>
+      <ul>
+        <li>"Treats chronic fatigue"</li>
+        <li>"Reverses aging"</li>
+        <li>"Cures dehydration from hangover"</li>
+        <li>"Prevents Alzheimer's"</li>
+      </ul>
+    </div>
+    <div class="compare-col safe">
+      <h4>Structure/function · Allowed</h4>
+      <ul>
+        <li>"Supports energy and post-workout recovery"</li>
+        <li>"Supports skin and collagen health"</li>
+        <li>"Replenishes fluids and electrolytes"</li>
+        <li>"Supports immune function"</li>
+      </ul>
+    </div>
+  </div>
+
+  <p>Service names that imply outcomes carefully ("Athlete Recovery IV," "Beauty/Youth IV," "Immune IV," "Energy IV") are defensible. Where things break is body copy that claims to treat or cure a condition.</p>
+
+  <div class="callout caution">
+    <div class="label">FTC adds substantiation</div>
+    <p>The FTC's 2022-2023 Health Products Compliance Guidance tightened the standard. Claims about health benefits generally require "competent and reliable scientific evidence," typically randomized controlled trials for treatment claims. Aspirational language ("feel more energized") is safer than performance claims ("increases energy by 40%").</p>
+  </div>
+
+  <!-- FTC -->
+  <h2 class="section"><span class="num">08.</span>FTC · Endorsement Guides and Testimonials</h2>
+
+  <p>The FTC revised 16 CFR Part 255 in 2023. Headline change for healthcare marketers: the "results not typical" safe harbor was removed.</p>
+
+  <ul>
+    <li><strong>Testimonials must depict typical results,</strong> OR the ad must clearly and conspicuously state what typical results actually are.</li>
+    <li><strong>Material connections must be disclosed clearly.</strong> Employee, paid influencer, comped patient, friend of founder — disclose in a way that is "difficult to miss and easily understandable."</li>
+    <li><strong>Acceptable social disclosures:</strong> #sponsored, #ad, "Paid partnership with [Brand]." Generic "thanks @brand" is not acceptable.</li>
+    <li><strong>Fake reviews are prohibited.</strong> The FTC finalized a rule in late 2024 with civil penalties up to $51,744 per violation per occurrence.</li>
+    <li><strong>Testimonialists must have actually used the service</strong> in a way representative of how a typical customer would.</li>
+  </ul>
+
+  <h3 class="sub">For Luxe Rejuvenate specifically</h3>
+  <ul>
+    <li>"300+ clients with 5-star Google ratings" — fine. Factual summary of public reviews, not testimonial endorsement.</li>
+    <li>"Lisa lost 15 pounds in 30 days with our IV protocol" — needs HIPAA authorization, typical-results substantiation, and disclosure if Lisa is employee/comped.</li>
+    <li>Influencer partnerships — clear sponsored-by-Luxe disclosure on every post, not just the first one.</li>
+    <li>Medical team members in ads — fine. If they describe personal results, employee status should be clear.</li>
+  </ul>
+
+  <!-- FLORIDA -->
+  <h2 class="section"><span class="num">09.</span>Florida · Medical Director, Clinic Licensure, Disclaimers</h2>
+
+  <h3 class="sub">Medical director</h3>
+  <p>Florida requires every IV therapy operation to have a licensed MD or DO as medical director, with authority over clinical protocols, supervision, recordkeeping, and quality assurance. Palumbo D.O. is named in Context.md. Confirm signed medical director agreement on file, protocols documented, chart audits happening, escalation pathway defined.</p>
+
+  <h3 class="sub">RN scope of practice</h3>
+  <p>A Florida-licensed RN can administer IV therapy under physician protocols. Franklin R.N. (owner) and any RN staff can therefore administer in the field. APRNs administering IV therapy in a med-spa setting operate under physician supervisory protocol, not autonomously. LPNs can administer under delegated supervision per Fla. Admin. Code R. 64B9-12.005.</p>
+
+  <h3 class="sub">Clinic licensure (Fla. Stat. 400.9905)</h3>
+  <div class="callout warn">
+    <div class="label">Open structural question</div>
+    <p>An entity providing health care services and billing for them is a "clinic" and must be licensed by AHCA unless it qualifies for the physician-owned exemption (wholly owned by Florida-licensed physicians, services provided by those physicians, directly supervised by them).</p>
+    <p><strong>If Luxe Rejuvenate LLC is owned by Franklin R.N. without physician co-ownership, the physician-owned exemption does not apply.</strong> Luxe likely needs to either restructure ownership to include Palumbo D.O., or hold a Health Care Clinic License from AHCA. Mobile clinics are explicitly within scope, so the mobile model does not change this.</p>
+    <p>This is foundational legal. Ventari should not be ramping paid traffic to a non-compliant operation. Confirm with Katy before any major spend starts.</p>
+  </div>
+
+  <h3 class="sub">Florida 72-hour-refund disclaimer (Fla. Stat. 456.062)</h3>
+  <p>Required on any ad offering free or discounted services by a licensed Florida health care practitioner:</p>
+  <div class="callout caution">
+    <div class="label">Required language verbatim</div>
+    <p style="font-family: 'Crimson Text', serif; font-style: italic;">"The patient and any other person responsible for payment has a right to refuse to pay, cancel payment, or be reimbursed for payment for any other service, examination, or treatment that is performed as a result of and within 72 hours of responding to the advertisement for the free, discounted fee, or reduced fee service, examination, or treatment."</p>
+    <p>6-point Times New Roman or larger in print. 15-second visual or verbal disclosure on broadcast/digital video. Applies to "first visit free," "$50 off intro," "Sip Drip Glow intro pricing." If we run a discount promo, the landing page footer and the ad creative end-card both carry this.</p>
+  </div>
+
+  <!-- TCPA -->
+  <h2 class="section"><span class="num">10.</span>TCPA · SMS and Email Marketing</h2>
+
+  <p>Since Meta optimization is restricted for Luxe, email and SMS carry the bottom of the funnel. Rules to follow:</p>
+
+  <h3 class="sub">Marketing texts (promotions, offers, "book your next IV")</h3>
+  <ul>
+    <li>Prior express written consent required. Must be in writing, clearly identify Luxe Rejuvenate, identify the phone number being authorized, and state the recipient is not required to consent as a condition of purchase.</li>
+  </ul>
+
+  <h3 class="sub">Healthcare exemption (appointment, post-treatment, prescription)</h3>
+  <ul>
+    <li>Autodialed texts to a cell phone the patient provided are allowed, but cannot include marketing content.</li>
+    <li>Limited to 160 characters or less, with easy opt-out.</li>
+    <li>Capped at 1 per day and 3 per week per provider.</li>
+  </ul>
+
+  <h3 class="sub">FCC update (April 11, 2025)</h3>
+  <p>Patients can revoke consent through any reasonable method (replying STOP, calling, written request). Organizations must process revocations within 10 business days.</p>
+
+  <!-- CHECKLIST -->
+  <h2 class="section"><span class="num">11.</span>Pre-Publish Checklist</h2>
+
+  <div class="checklist">
+    <h3>Before anything ships to ads, the site, email, or SMS:</h3>
+    <p class="small">Run this list against every page, post, ad, and FAQ entry. If a row is uncertain, pause and ask.</p>
+
+    <div class="check-row"><div class="box"></div><div>No prescription drug brand names in copy or imagery (Ozempic, Wegovy, Mounjaro, Zepbound, etc.) without LegitScript Certification on file</div></div>
+    <div class="check-row"><div class="box"></div><div>No compounded peptide names (semaglutide, tirzepatide, BPC-157, GHK-Cu, etc.) until FDA reclassification is final</div></div>
+    <div class="check-row"><div class="box"></div><div>No real patient names, faces, or treatment outcomes without a signed HIPAA marketing authorization on file</div></div>
+    <div class="check-row"><div class="box"></div><div>No disease claims ("treats," "cures," "reverses," "prevents"). Structure/function language only ("supports," "designed for")</div></div>
+    <div class="check-row"><div class="box"></div><div>No personal-attribute copy ("Tired? Struggling with belly fat? Are you over 40?")</div></div>
+    <div class="check-row"><div class="box"></div><div>No before/after imagery implying medical outcomes</div></div>
+    <div class="check-row"><div class="box"></div><div>Any testimonial reflects typical results, OR ad clearly states what typical results are</div></div>
+    <div class="check-row"><div class="box"></div><div>Any material connection (employee, comped patient, paid influencer) is disclosed clearly</div></div>
+    <div class="check-row"><div class="box"></div><div>Florida 72-hour-refund disclaimer present on any "free" or "discounted" service offer</div></div>
+    <div class="check-row"><div class="box"></div><div>Booking, confirmation, and patient-portal pages have NO Meta Pixel, NO standard Google Analytics</div></div>
+    <div class="check-row"><div class="box"></div><div>If patient list upload is being considered for Meta Custom Audiences, the answer is no</div></div>
+    <div class="check-row"><div class="box"></div><div>BAA signed between Ventari and Luxe Rejuvenate before any PHI processing</div></div>
+    <div class="check-row"><div class="box"></div><div>SMS marketing has prior express written consent for each number; healthcare-exemption texts contain no marketing</div></div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p><strong>This is operational guidance, not legal review.</strong> For final sign-off on patient authorization forms, BAAs, FDA-specific claims, or clinic licensure status, route to a HIPAA-credentialed Florida healthcare attorney. Michelle's medical team has a counsel relationship on file.</p>
+    <p><strong>Update cadence:</strong> Before each major launch. FDA reclassification is moving; Meta policy is moving; Florida statutes update. This doc reflects 2026-05-11 research and should be re-verified before any new ad campaign.</p>
+    <p><strong>Source document:</strong> /Clients/Clearlight Ventures/Luxe Rejuvenate/Reports/Compliance-Research-HIPAA-Meta-FDA.md (full 400-line research). This is the readable overview.</p>
+    <p style="margin-top: 1.5rem;">© 2026 Ventari · Internal Reference · Not for external distribution outside Luxe Rejuvenate operational team</p>
+  </footer>
+
+</div>
+
+</body>
+</html>
